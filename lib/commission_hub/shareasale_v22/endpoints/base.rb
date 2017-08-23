@@ -12,7 +12,7 @@ module CommissionHub
                 "x-ShareASale-Date"           => timestamp
               },
               query: {
-                "version"     => version,
+                "version"     => api_version,
                 "action"      => action,
                 "affiliateId" => affiliate_id,
                 "token"       => api_token
