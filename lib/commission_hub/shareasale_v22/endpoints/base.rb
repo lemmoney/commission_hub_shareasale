@@ -18,7 +18,7 @@ module CommissionHub
                 "token"       => api_token,
                 "format"      => format
               }
-            }.merge(request_params)
+            }.deep_merge(request_params)
           connection.class.get(full_uri, request_params)
         end
 
