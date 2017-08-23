@@ -26,23 +26,23 @@ module CommissionHub
         end
 
         def api_token
-          connect.settings.api_token
+          connection.settings.api_token
         end
 
         def api_secret
-          connect.settings.api_secret
+          connection.settings.api_secret
         end
 
         def timestamp
-          (connect.settings.current_date || Time.now).utc.rfc2822
+          (connection.settings.current_date || Time.now).utc.rfc2822
         end
 
         def action
-          connect.settings.action
+          connection.settings.action
         end
 
         def affiliate_id
-          connect.settings.affiliate_id
+          connection.settings.affiliate_id
         end
 
         def signature
