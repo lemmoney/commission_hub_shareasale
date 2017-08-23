@@ -15,7 +15,8 @@ module CommissionHub
                 "version"     => api_version,
                 "action"      => action,
                 "affiliateId" => affiliate_id,
-                "token"       => api_token
+                "token"       => api_token,
+                "format"      => format
               }
             }.merge(request_params)
           connection.class.get(full_uri, request_params)
@@ -43,6 +44,10 @@ module CommissionHub
 
         def affiliate_id
           connection.settings.affiliate_id
+        end
+
+        def format
+          connection.settings.format
         end
 
         def signature
