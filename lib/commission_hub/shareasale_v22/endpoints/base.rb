@@ -47,7 +47,7 @@ module CommissionHub
 
         def signature
           Digest::SHA256
-            .hexdigest("#{api_token}:#{timestamp}:#{action}:#{secret_key}")
+            .hexdigest("#{api_token}:#{timestamp}:#{action}:#{api_secret}")
         end
 
       end
